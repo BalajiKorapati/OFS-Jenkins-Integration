@@ -6,7 +6,7 @@ import io.cucumber.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		//tags = "@T001, @T002, @T003, @T004"
+//		tags = "@T001, @T002, @T003, @T004",
         tags = "@T001",
 		features = { "src/test/resources/features" },
 		plugin = {"html:target/cucumber-html-report", "json:target/report.json",
