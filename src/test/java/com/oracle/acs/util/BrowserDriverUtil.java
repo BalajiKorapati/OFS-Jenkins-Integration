@@ -243,7 +243,8 @@ public class BrowserDriverUtil
         final EdgeOptions edgeOptions = new EdgeOptions();
         edgeOptions.setCapability("acceptInsecureCerts", true);
         edgeOptions.setCapability("acceptSslCerts", true);
-        System.setProperty("webdriver.edge.driver", PropertyUtils.getProperty("ieDriverPath"));
+//        System.setProperty("webdriver.edge.driver", PropertyUtils.getProperty("ieDriverPath"));
+        WebDriverManager.edgedriver().setup();
         final WebDriver edgeDriver = (WebDriver)new EdgeDriver(edgeOptions);
         edgeDriver.manage().window().maximize();
         return edgeDriver;
