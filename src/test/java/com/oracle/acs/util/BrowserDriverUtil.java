@@ -79,11 +79,11 @@ public class BrowserDriverUtil
 
     public static void init() {
         try {
-
-            WebDriverManager.chromedriver().setup();
-            WebDriver driver = new ChromeDriver();
-            driver.get("http://www.total-qa.com");
-            System.out.println("Browser launched");
+        	// Commented on 21-Oct-2021
+//            WebDriverManager.chromedriver().setup();
+//            WebDriver driver = new ChromeDriver();
+//            driver.get("http://www.total-qa.com");
+//            System.out.println("Browser launched");
             try{
                 PropertyUtils.loadProperties(new FileInputStream("src/test/resources/propertyFiles/default/system-default.properties"),true);
                 PropertyUtils.loadProperties(new FileInputStream("src/test/resources/propertyFiles/ofs-dev/dev.properties"),true);
@@ -194,7 +194,7 @@ public class BrowserDriverUtil
 
         //Added on 20-ct-2021
 
-        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.chromedriver().setup(); //commented on 21-Oct-2021
         final ChromeDriverService driverService = ChromeDriverService.createDefaultService();
 
 
